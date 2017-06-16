@@ -13,14 +13,9 @@ endpoint = "https://api.zaim.net/v1/pay/create.json"
 with open('kakeibo.json', 'r') as f:
     print(f)
     data_json = json.load(f)
-
-print(data_json)
-print(type(data_json))
-
-i = 0
+    #print(data_json)
 
 for entry in data_json:
-    #print(entry)
     sign = entry["sign"]
     
     if sign == "0":
@@ -50,8 +45,5 @@ for entry in data_json:
             "comment": entry["detail"],
         }
 
-        r = requests.post(endpoint, data=data, auth=auth)
-
-        i += 1
-        #if i == 5:
-        #    break
+        #データを追加する場合はここを実行
+        #r = requests.post(endpoint, data=data, auth=auth)
