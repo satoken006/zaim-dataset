@@ -13,7 +13,7 @@ endpoint = "https://api.zaim.net/v1/pay/create.json"
 with open('kakeibo.json', 'r') as f:
     print(f)
     data_json = json.load(f)
- 
+
 print(data_json)
 print(type(data_json))
 
