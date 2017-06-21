@@ -15,7 +15,8 @@ data = json.loads(r.text)
 purchases = data["money"]
 for purchase in purchases:
     category_id = purchase["category_id"]
+    name = str(purchase["name"])
     comment = str(purchase["comment"])
 
-    if len(comment) > 0 and category_id == 108:
-        print(category_id, comment)
+    if len(comment) >= 0 and category_id == 108:
+        print(category_id, name, "コメント: "+ comment)
